@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#! /usr/bin/env python3
 from download_links import*
 import multiprocessing as mp
 from bs4 import BeautifulSoup
