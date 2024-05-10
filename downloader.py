@@ -96,5 +96,5 @@ def main():
         download_all_tutorials([
             "https://www.javatpoint.com/",
             "https://www.tutorialspoint.com/tutorialslibrary.htm"
-        ], "https://www.tutorialsp
-
+        ],
+        "https://www.tutorialspoint.com/"
