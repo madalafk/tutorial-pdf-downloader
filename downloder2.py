@@ -65,16 +65,11 @@ def convert_to_pdf(tutorial):
 
 def convert_all_to_pdf():
     completed_tutorials = set()
-    while not os.listdir(os.path.join('..', 'temp')):
-        time.sleep(2)
-
+    # Wait for downloads to finish (replace with actual download completion check)
+    time.sleep(10)  # Replace with a mechanism that indicates download completion
+    
     while os.listdir(os.path.join('..', 'temp')):
         tutorials = fnmatch.filter(os.listdir(os.path.join('..', 'temp')), '*.html')
-        for tutorial in tutorials:
-            if tutorial not in completed_tutorials:
-                convert_to_pdf(tutorial)
-                completed_tutorials.add(tutorial)
-
     try:
         shutil.rmtree(os.path.join('..', 'temp'))
     except Exception as e:
@@ -98,4 +93,4 @@ def main():
             "https://www.tutorialspoint.com/tutorialslibrary.htm"
         ],
         "https://www.tutorialspoint.com/"
-    )
+        )
